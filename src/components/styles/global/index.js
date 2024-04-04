@@ -11,13 +11,18 @@ const GlobalStyle = createGlobalStyle`
     } 
     body {
         background: ${(props) => props.theme.background};
-        color: ${props => props.theme.text};        
+        color: ${props => props.theme.text};       
     }
     .accent {
         background-color: ${props => props.theme.accent};
         color: ${props => props.theme.text};
         height: 30px;
     }
+    h1{
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+
   `;
 
   export default GlobalStyle;

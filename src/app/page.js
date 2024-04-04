@@ -4,14 +4,12 @@ import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../components/styles/global";
 import { lightTheme, darkTheme } from "../components/styles/theme/index.js";
-const Container = styled.div``;
-const Button = styled.button`
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin: 10px;
+import Form from "@/components/form";
+
+const Container = styled.div`
+
 `;
+
 const Switch = styled.div`
   display: inline-block;
   width: 60px;
@@ -49,6 +47,7 @@ export default function Home() {
         <Switch isActive={isActive} onClick={handleToggle} >
           <Slider isActive={isActive} />
         </Switch>
+        <Form />
       </Container>
     </ThemeProvider>
   );
