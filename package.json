@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide": "^0.365.0",
     "lucide-react": "^0.364.0",
     "next": "14.1.4",
+    "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
     "styled-component": "^2.8.0",
