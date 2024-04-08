@@ -1,6 +1,8 @@
 import styled from "styled-components"
-import Input from "../input";
-import Button from "../button";
+import Input from '@/components/input/'
+import ButtonWrapper from '@/components/button/'
+import { ArrowRight } from 'lucide-react';
+import { User } from 'lucide-react';
 const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
@@ -8,6 +10,8 @@ const FormContainer = styled.form`
     width: 50%;
     gap: 10px;
     padding: 10px;
+
+    
 `;
 const Title = styled.h1`
     text-align: center;
@@ -18,12 +22,12 @@ export default function Form (){
     return(
         <FormContainer>
             <Title>Formulário de contato</Title>
-            <Input type="text" placeholder="Nome" />
-            <Input type="email" placeholder="Email" />
-            <Input type="tel" placeholder="Telefone" />
-            <Input type="text" placeholder="Assunto" />
-            <Input type="textarea" placeholder="Mensagem" />
-            <Button width="100px"  >Enviar</Button>
+            <Input placeholder="Nome" type="text" iconLeft={<User size={20}/>}/>
+            <ButtonWrapper  width="200px">Enviar</ButtonWrapper>
+            <ButtonWrapper variant="primary"  width="200px">Criar um novo</ButtonWrapper>
+            <ButtonWrapper variant="disabled"  width="200px">Enviar</ButtonWrapper>
+            <ButtonWrapper variant="secondary"  width="200px">Enviar</ButtonWrapper>
+            <ButtonWrapper variant="secondary"  width="100px" iconRight={<ArrowRight size={20} strokeWidth={2}  />}></ButtonWrapper>
         </FormContainer>
     )
 }
